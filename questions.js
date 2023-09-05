@@ -1,5 +1,4 @@
 // ##1> Explain the event loop in JavaScript and how it handles asynchronous operations.
-
 //it is used to enable the asynchronous  programming.
 //code remain responsive and non-blocking
 
@@ -79,12 +78,12 @@
 
 //=====================scope=======
 
-{
-  var x = 20;
-  let y = 20;
-  const z = 20;
-}
-console.log(x); // 20
+// {
+//   var x = 20;
+//   let y = 20;
+//   const z = 20;
+// }
+// console.log(x); // 20
 // console.log(y); //output:  ReferenceError: y is not defined
 // console.log(z); //output:  ReferenceError: z is not defined
 
@@ -93,3 +92,90 @@ console.log(x); // 20
 // =====================================================================================================================
 
 // ### 4> How does hoisting work in JavaScript?
+// Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase.
+
+// However, there are two primary aspects of hoisting:
+
+//  variable hosting
+// console.log(x); //output: undefined
+// var x;
+// x = 10;
+// console.log(x); // output: 10
+
+//let and const Declerations
+// console.log(x); //output: get error
+// let x = 20;
+// console.log(x); //output: 20
+
+// and
+
+//functional hosting
+// sayHello(); //output: Hello
+// function sayHello() {
+//   console.log("Hello");
+// }
+//
+
+//arrow function is similar to the let and const
+
+// =====================================================================================================================
+// ##5> Explain the concept of lexical scoping in JavaScript.
+// Lexical scoping is a fundamental concept in JavaScript and many other programming languages.
+// It defines how variable scope is determined based on the physical structure of the code,
+// specifically, how and where functions are declared within the code. In lexical scoping,
+// the scope of a variable is determined by its location in the source code, at the time
+// the code is written, not when it's executed.
+
+// const outerFunction = () => {
+//   let outerUser = {
+//     name: "samson",
+//     age: 24,
+//     isAdmin: false,
+//   };
+
+//   //this inner function can access its own inner variable and outer variable
+//   let innerFunction = () => {
+//     let innerUser = {
+//       name: "sagar",
+//     };
+//     console.log(`My name is ${innerUser.name} from inner`);
+//     console.log(`My name is ${outerUser.name} from outer`);
+//   };
+
+//   innerFunction();
+//   //outer function can access its own variable
+//   console.log(`My name is ${outerUser.name} from outer`);
+// };
+// outerFunction();
+
+// output:
+// My name is sagar from inner
+// My name is samson from outer
+// My name is samson from outer
+
+// =====================================================================================================================
+//##6 What are the different data types in JavaScript?
+
+//Premetive dataType/(immutable value): Number, String, Boolean, Undefined, Null, Symbol, BigInt,
+//Non-Premetive/(mutable value) :  Object, Array, Function, Date, RegExp, Map(ES6), Set(ES6),
+
+// let map = new Map();
+// console.log(map);
+// //output: Map(0) {}
+
+// map.set("name", "samson");
+// console.log(map);
+// //output: Map(1) { 'name' => 'samson' }
+
+// map.set("age", 23);
+// console.log(map);
+// // output: Map(2) { 'name' => 'samson', 'age' => 23 }
+
+// //
+// console.log(map.get("name")); //output: samson
+// console.log(map.delete("name"));
+// console.log(map.size); //output: 1
+
+// //
+// const x = new Set([2, 4, 5]);
+// console.log(x);
