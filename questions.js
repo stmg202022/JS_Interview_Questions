@@ -186,3 +186,43 @@
 // or the current object, depending on how and where it is used.
 // Its purpose can vary depending on the context, and it plays a crucial role in object-oriented programming and event handling.
 //see on this.js file
+
+// =====================================================================================================================
+//### 8>How do you deep clone an object in JavaScript?
+//A deep clone in JavaScript is a process of creating a new object that is an exact copy of another object, including all nested objects and their properties
+
+//Using JSON.stringify and JSON.parse:   // create const originalArray too
+const originalObj = {
+  name: "sagar",
+  age: 24,
+  address: {
+    street: "123 Main St",
+    city: "ktm",
+  },
+};
+
+function deepClone(org) {
+  return JSON.parse(JSON.stringify(org));
+}
+
+// const clone = deepClone(originalObj);
+// clone.address.city = "Lalitpur";
+// console.log(clone);
+// console.log(originalObj); //original state is not changing
+
+// const copy = originalObj;
+// copy.address.city = "dhading";
+// console.log(copy);
+// console.log(originalObj); //original state is changing
+// console.log("is original state is changing?:", copy === original);
+
+// =====================================================================================================================
+//## 9> Explain the differences between null and undefined in JavaScript.
+
+let x;
+console.log(x); // output: undefined
+console.log(typeof x); //output: undefined
+
+x = null;
+console.log(x); //output: null
+console.log(typeof x); //output: object
