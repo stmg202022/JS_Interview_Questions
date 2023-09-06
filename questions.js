@@ -179,3 +179,10 @@
 // //
 // const x = new Set([2, 4, 5]);
 // console.log(x);
+
+// =====================================================================================================================
+//## 7>What is the purpose of the this keyword in JavaScript?
+// The this keyword in JavaScript is a special keyword that is used to refer to the current execution context
+// or the current object, depending on how and where it is used.
+// Its purpose can vary depending on the context, and it plays a crucial role in object-oriented programming and event handling.
+//see on this.js file
