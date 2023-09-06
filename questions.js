@@ -186,6 +186,7 @@
 // or the current object, depending on how and where it is used.
 // Its purpose can vary depending on the context, and it plays a crucial role in object-oriented programming and event handling.
 //see on this.js file
+<<<<<<< HEAD
 
 // =====================================================================================================================
 //### 8>How do you deep clone an object in JavaScript?
@@ -226,3 +227,5 @@ console.log(typeof x); //output: undefined
 x = null;
 console.log(x); //output: null
 console.log(typeof x); //output: object
+=======
+>>>>>>> 5f4bcb4 (what is the purpose of 	his keyword in js ?)
